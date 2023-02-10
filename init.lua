@@ -39,7 +39,11 @@ require("lazy").setup({
   { 'nvim-tree/nvim-web-devicons', },
   { 'mbbill/undotree' },
   { 'tpope/vim-vinegar' },
-  { 'jose-elias-alvarez/null-ls.nvim' },
+  { 'jose-elias-alvarez/null-ls.nvim',
+    config = function()
+      require("plugins.null-ls")
+    end
+  },
   { 'numToStr/Comment.nvim',
     config = function()
       require('Comment').setup()
