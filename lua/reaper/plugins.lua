@@ -5,7 +5,13 @@ return {
       require("plugins.colorscheme")
     end,
   },
-   {
+  {  
+    'stevearc/oil.nvim',
+    config = function()
+      require("plugins.oil")
+    end,
+  },
+  {
     'nvim-telescope/telescope.nvim', version = '0.1.0',
             -- or                            , branch = '0.1.x',
     dependencies = { {'nvim-lua/plenary.nvim'} },
@@ -28,11 +34,10 @@ return {
   },
   { 'nvim-tree/nvim-web-devicons', },
   { 'mbbill/undotree' },
-  { 'tpope/vim-vinegar' },
   { 'jose-elias-alvarez/null-ls.nvim',
     config = function()
       require("plugins.null-ls")
-    end
+    end,
   },
   { 'numToStr/Comment.nvim',
     config = function()
