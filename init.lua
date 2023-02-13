@@ -7,4 +7,5 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require("reaper.keymaps")
 require("reaper.options")
+require("reaper.lazy")
 require("lazy").setup("reaper.plugins")
