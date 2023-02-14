@@ -7,6 +7,9 @@ return {
   },
   {  
     'stevearc/oil.nvim',
+    keys = {
+      {"-", "<CMD>Oil<CR>", mode = { "n" }},
+    },
     config = function()
       require("plugins.oil")
     end,
@@ -14,7 +17,14 @@ return {
   {
     'nvim-telescope/telescope.nvim', version = '0.1.0',
             -- or                            , branch = '0.1.x',
-    dependencies = { {'nvim-lua/plenary.nvim'} },
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    keys = {
+      { "<leader>ft", "<CMD>Telescope<CR>", mode = { "n" } },
+      { "<leader>ff", "<CMD>Telescope find_files<CR>", mode = { "n" } },
+      { "<leader>fg", "<CMD>Telescope live_grep<CR>", mode = { "n" } },
+      { "<leader>fb", "<CMD>Telescope buffers<CR>", mode = { "n" } },
+      { "<leader>fh", "<CMD>Telescope help_tags<CR>", mode = { "n" } },
+    },
     config = function()
       require("plugins.telescope")
     end,
