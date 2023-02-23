@@ -14,10 +14,7 @@ local RANGE_FORMATTING = methods.internal.RANGE_FORMATTING
 
 local sources = {
  formatting.prettierd.with({
-  filetypes = { "html", "javascript", "javascriptreact", "typescript", "typescriptreact", "css", "scss", "json", "yaml", "markdown" },
-  -- env = {
-  --   PRETTIERD_DEFAULT_CONFIG = vim.fn.expand("~/.config/nvim/.prettierrc.json"),
-  -- },
+  filetypes = { "html", "css", "scss", "json", "yaml", "markdown" },
   generator_opts = {
     command = "prettierd",
     args = function(params)
@@ -53,10 +50,10 @@ local sources = {
   },
   factory = h.formatter_factory,
  }),
- diagnostics.eslint_d,
- codeactions.eslint_d.with({
-   filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
-    extra_args = { "-f", "json", "--stdin", "--stdin-filename", "$FILENAME" },
+ diagnostics.eslint,
+ codeactions.eslint.with({
+  filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+  extra_args = { "-f", "json", "--stdin", "--stdin-filename", "$FILENAME" },
  }),
 }
 
