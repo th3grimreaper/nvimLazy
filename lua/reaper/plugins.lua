@@ -3,7 +3,7 @@ return {
     'sainnhe/gruvbox-material',
     config = function()
       require("plugins.colorscheme")
-    end,
+    end
   },
   {  
     'stevearc/oil.nvim',
