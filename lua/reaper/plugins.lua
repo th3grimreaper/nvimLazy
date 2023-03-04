@@ -1,6 +1,7 @@
 return {
   {
-    'sainnhe/gruvbox-material',
+    'catppuccin/nvim',
+    name = 'catppuccin',
     config = function()
       require("plugins.colorscheme")
     end
