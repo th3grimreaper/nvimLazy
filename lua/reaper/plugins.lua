@@ -1,7 +1,9 @@
 return {
   {
-    'catppuccin/nvim',
-    name = 'catppuccin',
+    -- 'catppuccin/nvim',
+    -- name = 'catppuccin',
+    -- 'rmehri01/onenord.nvim',
+    'rebelot/kanagawa.nvim',
     config = function()
       require("plugins.colorscheme")
     end
