@@ -1,6 +1,7 @@
 return {
   {
-    'rebelot/kanagawa.nvim',
+    -- 'rebelot/kanagawa.nvim',
+    'folke/tokyonight.nvim',
     config = function()
       require("plugins.colorscheme")
     end

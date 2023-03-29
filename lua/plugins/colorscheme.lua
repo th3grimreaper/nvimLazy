@@ -1,31 +1,25 @@
-require('kanagawa').setup({
-    compile = false,             -- enable compiling the colorscheme
-    undercurl = true,            -- enable undercurls
-    commentStyle = { italic = true },
-    functionStyle = {},
-    keywordStyle = { italic = true},
-    statementStyle = { bold = true },
-    typeStyle = {},
-    transparent = true,         -- do not set background color
-    dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
-    terminalColors = true,       -- define vim.g.terminal_color_{0,17}
-    colors = {                   -- add/modify theme and palette colors
-        palette = {},
-        theme = { wave = {}, lotus = {}, dragon = {}, all = {
-          ui = {
-            bg_gutter = "none",
-          },
-        } },
-    },
-    overrides = function(colors) -- add/modify highlights
-        return {}
-    end,
-    theme = "wave",              -- Load "wave" theme when 'background' option is not set
-    background = {               -- map the value of 'background' option to a theme
-        dark = "wave",           -- try "dragon" !
-        light = "lotus"
-    },
+require("tokyonight").setup({
+  style = "night", --storm, moon, night
+  light_style = "day",
+  transparent = true,
+  terminal_colors = true,
+  styles = {
+    comments = { italic = true },
+    keywords = { italic = true },
+    functions = {},
+    variables = {},
+    sidebars = "dark",
+    floats = "dark",
+  },
+  sidebars = { "qf", "help" },
+  day_brightness = 0.3,
+  hide_inactive_statusline = false,
+  dim_inactive = false,
+  lualine_bold = false,
+
+  on_colors = function(colors) end,
+
+  on_highlights = function(highlights, colors) end,
 })
 
--- setup must be called before loading
-vim.cmd("colorscheme kanagawa")
+vim.cmd[[colorscheme tokyonight]]
