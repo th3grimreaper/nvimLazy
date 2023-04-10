@@ -25,6 +25,15 @@ return {
     'nvim-telescope/telescope.nvim', version = '0.1.0',
             -- or                            , branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim' },
+    keys = {
+      { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
+      -- add a keymap to browse plugin files
+      {
+        "<leader>fp",
+        function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
+        desc = "Find Plugin File",
+      },
+    },
     config = function()
       require("plugins.telescope")
     end,
@@ -38,6 +47,7 @@ return {
   },
   {
     'nvim-lualine/lualine.nvim',
+    event = "VeryLazy",
     config = function()
       require("plugins.lualine")
     end,
