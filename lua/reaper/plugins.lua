@@ -2,6 +2,9 @@ return {
   {
     -- 'rebelot/kanagawa.nvim',
     'folke/tokyonight.nvim',
+    laxy = false,
+    priority = 1000,
+    -- event = "VeryLazy",
     config = function()
       require("plugins.colorscheme")
     end
@@ -25,15 +28,16 @@ return {
     'nvim-telescope/telescope.nvim', version = '0.1.0',
             -- or                            , branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim' },
-    keys = {
-      { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
-      -- add a keymap to browse plugin files
-      {
-        "<leader>fp",
-        function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
-        desc = "Find Plugin File",
-      },
-    },
+    -- keys = {
+    --   { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
+    --   -- add a keymap to browse plugin files
+    --   {
+    --     "<leader>fp",
+    --     function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
+    --     desc = "Find Plugin File",
+    --   },
+    -- },
+    event = "VeryLazy",
     config = function()
       require("plugins.telescope")
     end,
@@ -95,30 +99,42 @@ return {
     end,
   },
    --LSP
-  {"williamboman/mason.nvim",
+  {
+    'williamboman/mason.nvim',
+    -- event = "VeryLazy",
     config = function()
       require("plugins.mason")
     end,
   },
-  {"williamboman/mason-lspconfig.nvim"},
-  {"neovim/nvim-lspconfig",
+  {'williamboman/mason-lspconfig.nvim'},
+  {
+    'neovim/nvim-lspconfig',
     config = function()
       require("plugins.lsp")
     end,
   },
   --cmp
   {
-    "hrsh7th/nvim-cmp", 
+    'hrsh7th/nvim-cmp', 
+    event = "InsertEnter",
+    dependencies = {
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp_luasnip',
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-nvim-lua',
+    },
     config = function()
       require("plugins.cmp")
     end,
   },
-  {"hrsh7th/cmp-buffer"},
-  {"hrsh7th/cmp-path"},
-  {"saadparwaiz1/cmp_luasnip"},
-  {"hrsh7th/cmp-nvim-lsp"},
-  {"hrsh7th/cmp-nvim-lua"},
+
+  -- { 'hrsh7th/cmp-buffer' },
+  -- { 'hrsh7th/cmp-path' },
+  -- { 'hrsh7th/cmp_luasnip' },
+  -- { 'hrsh7th/cmp-nvim-lsp' },
+  -- { 'hrsh7th/cmp-nvim-lua' },
 	-- Snippets
-   { "L3MON4D3/LuaSnip" },
-   { "rafamadriz/friendly-snippets" },
+  { 'L3MON4D3/LuaSnip' },
+  { 'rafamadriz/friendly-snippets' },
 }
