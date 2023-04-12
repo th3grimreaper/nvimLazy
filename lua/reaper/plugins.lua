@@ -63,7 +63,8 @@ return {
     end,
   },
   { 'JoosepAlviste/nvim-ts-context-commentstring' },
-  { 'windwp/nvim-autopairs',
+  { 
+    'windwp/nvim-autopairs',
     config = function()
       require("plugins.autopair")
     end,
