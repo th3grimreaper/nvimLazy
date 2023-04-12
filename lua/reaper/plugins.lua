@@ -9,12 +9,6 @@ return {
       require("plugins.colorscheme")
     end
   },
-  {
-    'echasnovski/mini.tabline', version = '*',
-    config = function()
-      require('mini.tabline').setup()
-    end
-  },
   {  
     'stevearc/oil.nvim',
     keys = {
