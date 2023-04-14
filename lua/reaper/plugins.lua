@@ -2,7 +2,7 @@ return {
   {
     -- 'rebelot/kanagawa.nvim',
     'folke/tokyonight.nvim',
-    laxy = false,
+    lazy = false,
     priority = 1000,
     -- event = "VeryLazy",
     config = function()

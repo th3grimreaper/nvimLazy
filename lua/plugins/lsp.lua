@@ -56,12 +56,33 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 local servers = { 'tsserver', 'html', 'cssls', 'gopls', 'emmet_ls' }
 
 for _, sv in ipairs(servers) do
-  require('lspconfig')[sv].setup {
+  lspconfig[sv].setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
   }
 end
+
+--tailwind
+lspconfig.tailwindcss.setup{
+  on_attach = on_attach,
+  cmd = { "tailwindcss-language-server", "--stdio" },
+  settings = {
+    tailwindCSS = {
+      classAttributes = { "class", "className", "classList", "ngClass" },
+      lint = {
+        cssConflict = "warning",
+        invalidApply = "error",
+        invalidConfigPath = "error",
+        invalidScreen = "error",
+        invalidTailwindDirective = "error",
+        invalidVariant = "error",
+        recommendedVariantOrder = "warning"
+      },
+      validate = true
+    }
+  },
+}
 
 --  eslint setup
 lspconfig.eslint.setup({
