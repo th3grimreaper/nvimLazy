@@ -17,6 +17,13 @@ cmp.setup({
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
   },
+  matching = {
+    disallow_fuzzy_matching = true,
+    disallow_fullfuzzy_matching = true,
+    disallow_partial_fuzzy_matching = true,
+    diallow_partial_matching = true,
+    disallow_prefix_unmatching = false,
+  },
   completion = { completeopt = "noselect" },
   preselect = cmp.PreselectMode.None,
   mapping = cmp.mapping.preset.insert({
