@@ -53,7 +53,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 
-local servers = { 'tsserver', 'html', 'cssls', 'gopls', 'emmet_ls' }
+local servers = { 'tsserver', 'html', 'cssls', 'emmet_ls' }
 
 for _, sv in ipairs(servers) do
   lspconfig[sv].setup {
@@ -63,10 +63,35 @@ for _, sv in ipairs(servers) do
   }
 end
 
+--gopls
+require("lspconfig").gopls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    gopls = {
+      analyses = {
+        fillstruct = false
+      }
+    }
+  }
+})
+
 --tailwind
+local root_pattern = require("lspconfig.util").root_pattern
+
 lspconfig.tailwindcss.setup{
   on_attach = on_attach,
+  capabilities = capabilities,
   cmd = { "tailwindcss-language-server", "--stdio" },
+  root_dir = root_pattern{
+    "tailwind.config.js",
+    "tailwind.config.ts",
+    "postcss.config.js",
+    "postcss.config.ts",
+    "package.json",
+    "node_modules",
+    ".git",
+  },
   settings = {
     tailwindCSS = {
       classAttributes = { "class", "className", "classList", "ngClass" },
