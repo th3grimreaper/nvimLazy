@@ -1,9 +1,5 @@
 local cmp = require'cmp'
 
-local blackOrWhiteFg = function(r,g,b) 
-  return ((r*0.299 + g*0.587 + b*0.114) > 186) and '#000000' or '#ffffff'
-end
-
 cmp.setup({
   snippet = {
     -- REQUIRED - you must specify a snippet engine
