@@ -24,7 +24,7 @@
   "nvim-ts-context-commentstring": { "branch": "main", "commit": "729d83ecb990dc2b30272833c213cc6d49ed5214" },
   "nvim-ts-rainbow": { "branch": "master", "commit": "ef95c15a935f97c65a80e48e12fe72d49aacf9b9" },
   "nvim-web-devicons": { "branch": "master", "commit": "0568104bf8d0c3ab16395433fcc5c1638efc25d4" },
-  "oil.nvim": { "branch": "master", "commit": "45f8497106cfada657c7d7af73707acb8cbed13c" },
+  "oil.nvim": { "branch": "master", "commit": "873ea3b85d1fba40e92059406c3f335dd57ffba1" },
   "plenary.nvim": { "branch": "master", "commit": "253d34830709d690f013daf2853a9d21ad7accab" },
   "tailwindcss-colorizer-cmp.nvim": { "branch": "main", "commit": "f044050da3ec6e1cdb31985beecec6810cc27f0b" },
   "telescope.nvim": { "branch": "master", "commit": "b79cd6c88b3d96b0f49cb7d240807cd59b610cd8" },
