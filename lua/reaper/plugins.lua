@@ -1,10 +1,8 @@
 return {
   {
-    -- 'rebelot/kanagawa.nvim',
     'folke/tokyonight.nvim',
     lazy = false,
     priority = 1000,
-    -- event = "VeryLazy",
     config = function()
       require("plugins.colorscheme")
     end
@@ -65,34 +63,44 @@ return {
   },
   { 'nvim-tree/nvim-web-devicons', },
   { 'mbbill/undotree' },
-  { 'jose-elias-alvarez/null-ls.nvim',
+  { 
+    'jose-elias-alvarez/null-ls.nvim',
     config = function()
       require("plugins.null-ls")
     end,
   },
-  { 'numToStr/Comment.nvim',
+  { 
+    'numToStr/Comment.nvim',
     config = function()
       require('Comment').setup()
     end,
   },
-  { 'JoosepAlviste/nvim-ts-context-commentstring' },
+  { 
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    event = 'VeryLazy',
+  },
   { 
     'windwp/nvim-autopairs',
     config = function()
       require("plugins.autopair")
     end,
   },
-  { 'lukas-reineke/indent-blankline.nvim',
+  { 
+    'lukas-reineke/indent-blankline.nvim',
     config = function()
       require("plugins.indent")
     end,
   },
-  {'NvChad/nvim-colorizer.lua',
+  {
+    'NvChad/nvim-colorizer.lua',
     config = function()
       require("plugins.colorizer")
     end,
   },
-  {'p00f/nvim-ts-rainbow'},
+  {
+    'p00f/nvim-ts-rainbow',
+    event = 'VeryLazy',
+  },
   {'tpope/vim-surround'},
   {
      'goolord/alpha-nvim',
