@@ -120,14 +120,14 @@ return {
     'williamboman/mason.nvim',
     -- event = "VeryLazy",
     config = function()
-      require("plugins.mason")
+      require("plugins.core.mason")
     end,
   },
   {'williamboman/mason-lspconfig.nvim'},
   {
     'neovim/nvim-lspconfig',
     config = function()
-      require("plugins.lsp")
+      require("plugins.core.lsp")
     end,
   },
   --cmp
@@ -142,7 +142,7 @@ return {
       'hrsh7th/cmp-nvim-lua',
     },
     config = function()
-      require("plugins.cmp")
+      require("plugins.core.cmp")
     end,
   },
 
