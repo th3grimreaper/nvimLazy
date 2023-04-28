@@ -97,11 +97,15 @@ return {
       require("plugins.colorizer")
     end,
   },
+  { 'mrjones2014/nvim-ts-rainbow' },
   {
-    'p00f/nvim-ts-rainbow',
-    event = 'VeryLazy',
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function()
+        require("nvim-surround").setup()
+    end
   },
-  {'tpope/vim-surround'},
   {
      'goolord/alpha-nvim',
      config = function()
