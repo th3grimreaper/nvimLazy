@@ -1,2 +1,3 @@
 # nvimLazy
-simple neovim configuration using lazy.nvim
+
+simple neovim configuration for web development using lazy.nvim
