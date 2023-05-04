@@ -1,4 +1,5 @@
 local set = vim.opt
+local setG = vim.g
 
 set.expandtab = true
 set.shiftwidth = 2
@@ -13,3 +14,6 @@ set.hlsearch = true
 set.splitright = true
 set.splitbelow = true
 set.laststatus = 3
+
+setG.loaded_netrw = 1
+setG.loaded_netrwPlugin = 1
