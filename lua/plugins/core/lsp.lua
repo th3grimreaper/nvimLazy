@@ -64,57 +64,10 @@ for _, sv in ipairs(servers) do
 end
 
 --gopls
-require("lspconfig").gopls.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
-  settings = {
-    gopls = {
-      analyses = {
-        fillstruct = false
-      }
-    }
-  }
-})
+lspconfig.gopls.setup(require("plugins.core.servers.gopls"))
 
 --tailwind
-local root_pattern = require("lspconfig.util").root_pattern
+lspconfig.tailwindcss.setup(require("plugins.core.servers.tailwind"))
 
-lspconfig.tailwindcss.setup{
-  on_attach = on_attach,
-  capabilities = capabilities,
-  cmd = { "tailwindcss-language-server", "--stdio" },
-  root_dir = root_pattern{
-    "tailwind.config.js",
-    "tailwind.config.ts",
-    "postcss.config.js",
-    "postcss.config.ts",
-    "package.json",
-    "node_modules",
-    ".git",
-  },
-  settings = {
-    tailwindCSS = {
-      classAttributes = { "class", "className", "classList", "ngClass" },
-      lint = {
-        cssConflict = "warning",
-        invalidApply = "error",
-        invalidConfigPath = "error",
-        invalidScreen = "error",
-        invalidTailwindDirective = "error",
-        invalidVariant = "error",
-        recommendedVariantOrder = "warning"
-      },
-      validate = true
-    }
-  },
-}
-
---  eslint setup
-lspconfig.eslint.setup({
-  on_attach = function(client, bufnr)
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      buffer = bufnr,
-      command = "EslintFixAll",
-    })
-  end,
-})
+--eslint
+lspconfig.eslint.setup(require("plugins.core.servers.eslint"))
