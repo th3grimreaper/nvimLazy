@@ -9,4 +9,3 @@ require("mason-lspconfig").setup({
      "tailwindcss",
    },
 })
-

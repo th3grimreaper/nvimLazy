@@ -3,6 +3,7 @@ return {
     'folke/tokyonight.nvim',
     lazy = false,
     priority = 1000,
+    event = "BufReadPre",
     config = function()
       require("plugins.colorscheme")
     end
@@ -97,7 +98,10 @@ return {
       require("plugins.colorizer")
     end,
   },
-  { 'mrjones2014/nvim-ts-rainbow' },
+  { 
+    'mrjones2014/nvim-ts-rainbow',
+    event = "BufReadPre",
+  },
   {
     "kylechui/nvim-surround",
     version = "*",
@@ -123,6 +127,8 @@ return {
   {
     'williamboman/mason.nvim',
     -- event = "VeryLazy",
+    cmd = "Mason",
+    event = "BufReadPre",
     config = function()
       require("plugins.core.mason")
     end,
@@ -130,6 +136,7 @@ return {
   {'williamboman/mason-lspconfig.nvim'},
   {
     'neovim/nvim-lspconfig',
+    event = "BufReadPre",
     config = function()
       require("plugins.core.lsp")
     end,
@@ -149,12 +156,6 @@ return {
       require("plugins.core.cmp")
     end,
   },
-
-  -- { 'hrsh7th/cmp-buffer' },
-  -- { 'hrsh7th/cmp-path' },
-  -- { 'hrsh7th/cmp_luasnip' },
-  -- { 'hrsh7th/cmp-nvim-lsp' },
-  -- { 'hrsh7th/cmp-nvim-lua' },
 	-- Snippets
   { 'L3MON4D3/LuaSnip' },
   { 'rafamadriz/friendly-snippets' },

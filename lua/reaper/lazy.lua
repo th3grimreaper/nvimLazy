@@ -21,7 +21,7 @@ return {
   },
   install = {
     missing = true,
-    colorscheme = { "catppuccin-mocha" },
+    colorscheme = { "tokyonight" },
   },
   ui = {
     size = { width = 0.8, height = 0.8 },
