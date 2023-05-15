@@ -3,9 +3,15 @@ return {
     'folke/tokyonight.nvim',
     lazy = false,
     priority = 1000,
-    event = "BufReadPre",
     config = function()
       require("plugins.colorscheme")
+    end
+  },
+  {
+    'stevearc/dressing.nvim',
+    event = "BufReadPre",
+    config = function()
+      require('dressing').setup()
     end
   },
   {
@@ -66,6 +72,7 @@ return {
   { 'mbbill/undotree' },
   { 
     'jose-elias-alvarez/null-ls.nvim',
+    event = "BufReadPre",
     config = function()
       require("plugins.core.null-ls")
     end,
@@ -82,6 +89,7 @@ return {
   },
   { 
     'windwp/nvim-autopairs',
+    event = "BufReadPre",
     config = function()
       require("plugins.autopair")
     end,
