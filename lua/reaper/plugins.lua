@@ -68,7 +68,7 @@ return {
       require("plugins.lualine")
     end,
   },
-  { 'nvim-tree/nvim-web-devicons', },
+  { 'nvim-tree/nvim-web-devicons' },
   { 'mbbill/undotree' },
   { 
     'jose-elias-alvarez/null-ls.nvim',
