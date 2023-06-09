@@ -8,6 +8,17 @@ return {
     end
   },
   {
+    "glepnir/lspsaga.nvim",
+    event = "LspAttach",
+    config = function()
+      require("lspsaga").setup({
+        lightbulb = {
+          enable = false,
+        },
+      })
+    end,
+  },
+  {
     'stevearc/dressing.nvim',
     event = "BufReadPre",
     config = function()
