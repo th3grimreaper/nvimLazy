@@ -13,6 +13,11 @@ require('telescope').setup{
   pickers = {
   },
   extensions = {
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown {
+        -- even more opts
+      }
+    }
   }
 }
 
@@ -22,3 +27,4 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>fr', builtin.oldfiles, {})
+require("telescope").load_extension("ui-select")

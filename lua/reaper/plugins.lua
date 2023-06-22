@@ -8,6 +8,10 @@ return {
     end
   },
   {
+    'nvim-telescope/telescope-ui-select.nvim',
+    event = "LspAttach",
+  },
+  {
     "glepnir/lspsaga.nvim",
     event = "LspAttach",
     config = function()
