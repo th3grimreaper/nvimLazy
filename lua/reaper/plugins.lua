@@ -8,6 +8,14 @@ return {
     end
   },
   {
+      "pmizio/typescript-tools.nvim",
+      event = "LspAttach",
+      opts = {},
+      config = function()
+        require("typescript-tools").setup{}
+      end,
+  },
+  {
     'nvim-telescope/telescope-ui-select.nvim',
     event = "LspAttach",
   },
@@ -167,7 +175,8 @@ return {
   --cmp
   {
     'hrsh7th/nvim-cmp', 
-    event = "InsertEnter",
+    -- event = "InsertEnter",
+    event = "BufReadPre",
     dependencies = {
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-path',
@@ -180,6 +189,9 @@ return {
     end,
   },
 	-- Snippets
-  { 'L3MON4D3/LuaSnip' },
+  { 
+    'L3MON4D3/LuaSnip',
+    event = "LspAttach",
+  },
   { 'rafamadriz/friendly-snippets' },
 }
