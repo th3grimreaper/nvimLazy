@@ -6,6 +6,7 @@ require("mason-lspconfig").setup({
      "cssls",
      "tsserver",
      "gopls",
+     "jsonls",
      "tailwindcss",
    },
 })

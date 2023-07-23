@@ -8,6 +8,12 @@ return {
     end
   },
   {
+    'eandrju/cellular-automaton.nvim',
+    keys = {
+      { "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>", desc = "Make it Rain" },
+    },
+  },
+  {
       "pmizio/typescript-tools.nvim",
       event = "LspAttach",
       opts = {},
@@ -130,7 +136,8 @@ return {
     end,
   },
   { 
-    'mrjones2014/nvim-ts-rainbow',
+    -- 'mrjones2014/nvim-ts-rainbow',
+    'hiphish/nvim-ts-rainbow2',
     event = "BufReadPre",
   },
   {
