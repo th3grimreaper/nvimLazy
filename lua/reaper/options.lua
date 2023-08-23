@@ -15,5 +15,5 @@ set.splitright = true
 set.splitbelow = true
 set.laststatus = 3
 
-setG.loaded_netrw = 1
-setG.loaded_netrwPlugin = 1
+-- setG.loaded_netrw = 1
+-- setG.loaded_netrwPlugin = 1

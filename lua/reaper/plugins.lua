@@ -8,6 +8,16 @@ return {
     end
   },
   {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+    },
+    keys = {
+      { "<leader>b", "<cmd>Neotree toggle<CR>", mode = { "n" }, desc = "Neotree" },
+    },
+  },
+  {
     'eandrju/cellular-automaton.nvim',
     keys = {
       { "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>", desc = "Make it Rain" },
@@ -55,15 +65,6 @@ return {
         formatting = { format = require("tailwindcss-colorizer-cmp").formatter }
       })
     end
-  },
-  {  
-    'stevearc/oil.nvim',
-    keys = {
-      {"-", "<CMD>Oil<CR>", mode = { "n" }},
-    },
-    config = function()
-      require("plugins.oil")
-    end,
   },
   {
     'nvim-telescope/telescope.nvim', version = '0.1.0',
