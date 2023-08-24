@@ -17,6 +17,7 @@ return {
       { "<leader>b", "<cmd>Neotree toggle<CR>", mode = { "n" }, desc = "Neotree" },
     },
   },
+  { 'nvim-tree/nvim-web-devicons' },
   {
     'eandrju/cellular-automaton.nvim',
     keys = {
@@ -98,8 +99,12 @@ return {
       require("plugins.lualine")
     end,
   },
-  { 'nvim-tree/nvim-web-devicons' },
-  { 'mbbill/undotree' },
+  { 
+    'mbbill/undotree',
+    keys = { 
+      { "<leader>u", "<cmd>UndotreeToggle<CR>" , { mode = "n" }, desc = "UndoTree" },
+    },
+  },
   { 
     'jose-elias-alvarez/null-ls.nvim',
     event = "BufReadPre",

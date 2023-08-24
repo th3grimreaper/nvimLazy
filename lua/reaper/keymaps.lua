@@ -17,7 +17,6 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 --undotree toggle
-vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 --move lines up/down in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
