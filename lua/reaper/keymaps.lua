@@ -52,5 +52,8 @@ keymap("v", ">", ">gv", opts)
 --remap ctrl+w with ctrl+backspace
 vim.api.nvim_set_keymap("i", "<C-H>", "<C-W>", { noremap = true })
 
+--remap netrw
+vim.api.nvim_set_keymap("n", "-", "<cmd>Explore<CR>", { noremap = true })
+
 --move lines up -> ddp
 --move lines down -> ddkP
