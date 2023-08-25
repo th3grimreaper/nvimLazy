@@ -141,11 +141,6 @@ return {
       require("plugins.colorizer")
     end,
   },
-  { 
-    -- 'mrjones2014/nvim-ts-rainbow',
-    'hiphish/nvim-ts-rainbow2',
-    event = "BufReadPre",
-  },
   {
     "kylechui/nvim-surround",
     version = "*",
