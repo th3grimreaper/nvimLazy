@@ -14,3 +14,5 @@ set.hlsearch = true
 set.splitright = true
 set.splitbelow = true
 set.laststatus = 3
+
+setG.netrw_keepdir = 0
