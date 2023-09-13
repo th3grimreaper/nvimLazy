@@ -8,6 +8,12 @@ return {
     end
   },
   {
+    "max397574/better-escape.nvim",
+    config = function()
+      require("better_escape").setup()
+    end
+  },
+  {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     dependencies = {
@@ -68,9 +74,11 @@ return {
     end
   },
   {
-    'nvim-telescope/telescope.nvim', tag = '0.1.2',
+    'nvim-telescope/telescope.nvim', tag = '0.1.3',
             -- or                            , branch = '0.1.x',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    dependencies = { 
+      'nvim-lua/plenary.nvim'
+    },
     -- keys = {
     --   { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
     --   -- add a keymap to browse plugin files
