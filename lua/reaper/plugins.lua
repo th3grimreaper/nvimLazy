@@ -165,12 +165,6 @@ return {
      end,
   },
   {'sindrets/diffview.nvim'},
-  {
-    'olexsmir/gopher.nvim',
-    config = function()
-      require("plugins.gopher")
-    end,
-  },
    --LSP
   {
     'williamboman/mason.nvim',

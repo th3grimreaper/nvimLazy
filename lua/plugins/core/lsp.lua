@@ -63,9 +63,6 @@ for _, sv in ipairs(servers) do
   }
 end
 
---gopls
-lspconfig.gopls.setup(require("plugins.core.servers.gopls"))
-
 --tailwind
 lspconfig.tailwindcss.setup(require("plugins.core.servers.tailwind"))
 
