@@ -52,3 +52,10 @@ vim.api.nvim_set_keymap("n", "-", "<cmd>Explore<CR>", { noremap = true })
 
 --move lines up -> ddp
 --move lines down -> ddkP
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+    vim.opt.formatoptions:remove { "c", "r", "o" }
+  end,
+    desc = "Disable New Line Comment",
+})
