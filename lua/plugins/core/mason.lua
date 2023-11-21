@@ -5,8 +5,8 @@ require("mason-lspconfig").setup({
      "html",
      "cssls",
      "tsserver",
-     "gopls",
      "jsonls",
      "tailwindcss",
+     "rust_analyzer"
    },
 })

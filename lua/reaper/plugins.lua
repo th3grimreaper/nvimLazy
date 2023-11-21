@@ -113,11 +113,18 @@ return {
       { "<leader>u", "<cmd>UndotreeToggle<CR>" , { mode = "n" }, desc = "UndoTree" },
     },
   },
-  { 
-    'jose-elias-alvarez/null-ls.nvim',
-    event = "BufReadPre",
+  -- { 
+  --   'jose-elias-alvarez/null-ls.nvim',
+  --   event = "BufReadPre",
+  --   config = function()
+  --     require("plugins.core.null-ls")
+  --   end,
+  -- },
+  {
+    'stevearc/conform.nvim',
+    event = { "BufReadPre" , "BufNewFile" },
     config = function()
-      require("plugins.core.null-ls")
+      require("plugins.conform")
     end,
   },
   { 
