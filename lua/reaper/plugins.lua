@@ -134,10 +134,6 @@ return {
     end,
   },
   { 
-    'JoosepAlviste/nvim-ts-context-commentstring',
-    event = 'VeryLazy',
-  },
-  { 
     'windwp/nvim-autopairs',
     event = "BufReadPre",
     config = function()
