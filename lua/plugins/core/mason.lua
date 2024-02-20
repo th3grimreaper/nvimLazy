@@ -7,6 +7,9 @@ require("mason-lspconfig").setup({
      "tsserver",
      "jsonls",
      "tailwindcss",
-     "rust_analyzer"
+     "rust_analyzer",
+     "clangd",
+     "jdtls",
+     "ruff_lsp"
    },
 })
