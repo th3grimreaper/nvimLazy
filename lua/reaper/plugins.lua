@@ -8,6 +8,15 @@ return {
     end
   },
   {
+    'stevearc/oil.nvim',
+    keys = {
+      { "-", "<CMD>Oil<CR>", mode = { "n" }, desc = "Open parent directory" },
+    },
+    config = function()
+      require("oil").setup()
+    end
+  },
+  {
     "max397574/better-escape.nvim",
     config = function()
       require("better_escape").setup()
