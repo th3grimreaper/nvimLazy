@@ -10,6 +10,8 @@ require("mason-lspconfig").setup({
      "rust_analyzer",
      "clangd",
      "jdtls",
-     "ruff_lsp"
+     "ruff_lsp",
+     "pyright",
+     "bashls"
    },
 })
