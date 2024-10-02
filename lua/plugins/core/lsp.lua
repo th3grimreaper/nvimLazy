@@ -53,7 +53,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 
-local servers = { 'tsserver', 'html', 'cssls', 'jdtls', 'emmet_ls', 'jsonls', 'bashls', 'pyright' }
+local servers = { 'jdtls', 'jsonls', 'bashls', 'pyright' }
 
 for _, sv in ipairs(servers) do
   lspconfig[sv].setup {
@@ -63,11 +63,11 @@ for _, sv in ipairs(servers) do
   }
 end
 
---tailwind
-lspconfig.tailwindcss.setup(require("plugins.core.servers.tailwind"))
+-- --tailwind
+-- lspconfig.tailwindcss.setup(require("plugins.core.servers.tailwind"))
 
---eslint
-lspconfig.eslint.setup(require("plugins.core.servers.eslint"))
+-- --eslint
+-- lspconfig.eslint.setup(require("plugins.core.servers.eslint"))
 
 --rust_analyzer
 lspconfig.rust_analyzer.setup(require("plugins.core.servers.rust"))

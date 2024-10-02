@@ -1,12 +1,12 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
    ensure_installed = { 
-     "emmet_ls", 
-     "html",
-     "cssls",
-     "tsserver",
+     -- "emmet_ls", 
+     -- "html",
+     -- "cssls",
+     -- "ts_ls",
      "jsonls",
-     "tailwindcss",
+     -- "tailwindcss",
      "rust_analyzer",
      "clangd",
      "jdtls",
