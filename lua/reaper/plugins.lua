@@ -55,14 +55,14 @@ return {
       { "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>", desc = "Make it Rain" },
     },
   },
-  -- {
-  --     "pmizio/typescript-tools.nvim",
-  --     event = "LspAttach",
-  --     opts = {},
-  --     config = function()
-  --       require("typescript-tools").setup{}
-  --     end,
-  -- },
+  {
+      "pmizio/typescript-tools.nvim",
+      event = "LspAttach",
+      opts = {},
+      config = function()
+        require("typescript-tools").setup{}
+      end,
+  },
   {
     'nvim-telescope/telescope-ui-select.nvim',
     event = "LspAttach",
