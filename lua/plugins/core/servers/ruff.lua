@@ -1,6 +1,6 @@
 return {
   init_options = {
-    cmd = { "ruff-lsp" },
+    cmd = { "ruff" },
     filetypes = { "python" },
     settings = {
       on_attach = on_attach,

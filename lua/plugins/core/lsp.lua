@@ -76,4 +76,4 @@ lspconfig.rust_analyzer.setup(require("plugins.core.servers.rust"))
 lspconfig.clangd.setup(require("plugins.core.servers.clangd"))
 
 --ruff-lsp
-lspconfig.ruff_lsp.setup(require("plugins.core.servers.ruff"))
+lspconfig.ruff.setup(require("plugins.core.servers.ruff"))
