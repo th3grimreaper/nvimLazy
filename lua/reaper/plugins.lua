@@ -85,19 +85,19 @@ return {
       require('dressing').setup()
     end
   },
-  -- {
-  --   "roobert/tailwindcss-colorizer-cmp.nvim",
-  --   -- optionally, override the default options:
-  --   event = "VeryLazy",
-  --   config = function()
-  --     require("tailwindcss-colorizer-cmp").setup({
-  --       color_square_width = 2,
-  --     })
-  --     require("cmp").setup({
-  --       formatting = { format = require("tailwindcss-colorizer-cmp").formatter }
-  --     })
-  --   end
-  -- },
+  {
+    "roobert/tailwindcss-colorizer-cmp.nvim",
+    -- optionally, override the default options:
+    event = "VeryLazy",
+    config = function()
+      require("tailwindcss-colorizer-cmp").setup({
+        color_square_width = 2,
+      })
+      require("cmp").setup({
+        formatting = { format = require("tailwindcss-colorizer-cmp").formatter }
+      })
+    end
+  },
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.3',
             -- or                            , branch = '0.1.x',
