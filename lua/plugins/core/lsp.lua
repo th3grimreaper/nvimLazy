@@ -53,7 +53,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 
-local servers = { 'html', 'cssls', 'ts_ls', 'jdtls', 'emmet_ls', 'jsonls', 'bashls', 'pyright' }
+local servers = { 'html', 'cssls', 'ts_ls', 'jdtls', 'emmet_ls', 'jsonls', 'bashls', 'pyright', 'ruff' }
 
 for _, sv in ipairs(servers) do
   lspconfig[sv].setup {
@@ -76,4 +76,4 @@ lspconfig.rust_analyzer.setup(require("plugins.core.servers.rust"))
 lspconfig.clangd.setup(require("plugins.core.servers.clangd"))
 
 --ruff-lsp
-lspconfig.ruff.setup(require("plugins.core.servers.ruff"))
+-- lspconfig.ruff.setup(require("plugins.core.servers.ruff"))
