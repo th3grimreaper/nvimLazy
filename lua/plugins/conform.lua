@@ -17,6 +17,7 @@ require("conform").setup({
     json = { "prettierd" },
     cpp = { "clang_format" },
     c = { "clang_format" },
+    -- golang = { "gofumpt" },
   },
   format_on_save = {
     timeout_ms = 500,
