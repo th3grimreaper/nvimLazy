@@ -53,7 +53,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 
-local servers = { 'html', 'cssls', 'ts_ls', 'jdtls', 'emmet_ls', 'jsonls', 'bashls', 'pyright', 'ruff' }
+local servers = { 'marksman', 'htmx', 'html', 'cssls', 'ts_ls', 'jdtls', 'templ', 'emmet_ls', 'jsonls', 'bashls', 'pyright', 'ruff' }
 
 for _, sv in ipairs(servers) do
   lspconfig[sv].setup {

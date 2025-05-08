@@ -17,6 +17,7 @@ require("conform").setup({
     json = { "prettierd" },
     cpp = { "clang_format" },
     c = { "clang_format" },
+    markdown = { 'prettierd' },
     -- golang = { "gofumpt" },
   },
   format_on_save = {
