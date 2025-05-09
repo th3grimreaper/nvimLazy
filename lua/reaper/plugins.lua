@@ -122,7 +122,7 @@ return {
       require("tailwindcss-colorizer-cmp").setup({
         color_square_width = 2,
       })
-      require("cmp").setup({
+      require("blink.cmp").setup({
         formatting = { format = require("tailwindcss-colorizer-cmp").formatter }
       })
     end
@@ -235,31 +235,79 @@ return {
   {'williamboman/mason-lspconfig.nvim'},
   {
     'neovim/nvim-lspconfig',
+    dependencies = { 
+      'saghen/blink.cmp', 
+      {
+      "folke/lazydev.nvim",
+        opts = {
+          library = {
+            path = { "${3rd}/luv/library", words = { "vim%.uv" } },
+          },
+        },
+      },
+    },
     event = "BufReadPre",
     config = function()
       require("plugins.core.lsp")
     end,
   },
   --cmp
-  {
-    'hrsh7th/nvim-cmp', 
-    -- event = "InsertEnter",
-    event = "BufReadPre",
-    dependencies = {
-      'hrsh7th/cmp-buffer',
-      'hrsh7th/cmp-path',
-      'saadparwaiz1/cmp_luasnip',
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-nvim-lua',
-    },
-    config = function()
-      require("plugins.core.cmp")
-    end,
-  },
+  -- {
+  --   'hrsh7th/nvim-cmp', 
+  --   -- event = "InsertEnter",
+  --   event = "BufReadPre",
+  --   dependencies = {
+  --     'hrsh7th/cmp-buffer',
+  --     'hrsh7th/cmp-path',
+  --     'saadparwaiz1/cmp_luasnip',
+  --     'hrsh7th/cmp-nvim-lsp',
+  --     'hrsh7th/cmp-nvim-lua',
+  --   },
+  --   config = function()
+  --     require("plugins.core.cmp")
+  --   end,
+  -- },
 	-- Snippets
   { 
     'L3MON4D3/LuaSnip',
     event = "LspAttach",
   },
   { 'rafamadriz/friendly-snippets' },
+  {
+    'saghen/blink.cmp',
+    dependencies = { 'rafamadriz/friendly-snippets' },
+
+    version = '1.*',
+
+    ---@module 'blink.cmp'
+    ---@type blink.cmp.Config
+    opts = {
+      keymap = { 
+        preset = 'default',
+        ['<Tab>'] = { 'select_and_accept', 'fallback' },
+      },
+      -- completion.ghost_text.enabled = true,
+      --
+      -- -- you may want to set the following options
+      -- completion.menu.auto_show = false, -- only show menu on manual <C-space>
+      -- completion.ghost_text.show_with_menu = false, -- only show when menu is closed
+
+      appearance = {
+        nerd_font_variant = 'mono'
+      },
+      signature = { enabled = true },
+      completion = { 
+       ghost_text = {
+         enabled = false,
+         show_with_menu = false,
+       },
+       menu = { 
+         auto_show = true,
+       },
+        documentation = { auto_show = true } 
+      },
+      fuzzy = { implementation = "prefer_rust_with_warning" }
+    },
+    opts_extend = { "sources.default" }
+  },
 }
