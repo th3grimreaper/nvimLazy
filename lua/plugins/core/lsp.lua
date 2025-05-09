@@ -49,8 +49,9 @@ local lsp_flags = {
 }
 
 -- Set up lspconfig.
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+local capabilities = require('blink.cmp').get_lsp_capabilities()
+-- local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 
 local servers = { 'marksman', 'htmx', 'html', 'cssls', 'ts_ls', 'jdtls', 'templ', 'emmet_ls', 'jsonls', 'bashls', 'pyright', 'ruff' }
