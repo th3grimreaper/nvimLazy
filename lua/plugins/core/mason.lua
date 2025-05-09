@@ -14,6 +14,11 @@ require("mason-lspconfig").setup({
 		"ruff",
 		"pyright",
 		"bashls",
+		"eslint",
+		"templ",
+		"bashls",
+		"htmx",
+		"marksman",
 	},
 	automatic_installation = true,
 })
