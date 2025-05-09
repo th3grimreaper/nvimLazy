@@ -7,6 +7,36 @@ return {
       require("plugins.colorscheme")
     end
   },
+  -- For `plugins.lua` users.
+  -- {
+  --     "OXY2DEV/markview.nvim",
+  --     lazy = false,
+  --     ft = { "markdown", "codecompanion", "Avante" }, -- If you decide to lazy-load anyway
+  --     preview = {
+  --       icon_provider = "devicons",
+  --     },
+  --   dependencies = {
+  --     "nvim-treesitter/nvim-treesitter",
+  --     "nvim-tree/nvim-web-devicons"
+  --   },
+  -- },
+  {
+    -- Install markdown preview, use npx if available.
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function(plugin)
+      if vim.fn.executable "npx" then
+        vim.cmd("!cd " .. plugin.dir .. " && cd app && npx --yes yarn install")
+      else
+        vim.cmd [[Lazy load markdown-preview.nvim]]
+        vim.fn["mkdp#util#install"]()
+      end
+    end,
+    init = function()
+      if vim.fn.executable "npx" then vim.g.mkdp_filetypes = { "markdown" } end
+    end,
+  },
   {
     "ray-x/go.nvim",
     dependencies = {  -- optional packages
@@ -198,11 +228,15 @@ return {
     -- event = "VeryLazy",
     cmd = "Mason",
     event = "BufReadPre",
+    commit = "fc98833b6da5de5a9c5b1446ac541577059555be",
     config = function()
       require("plugins.core.mason")
     end,
   },
-  {'williamboman/mason-lspconfig.nvim'},
+  {
+    'williamboman/mason-lspconfig.nvim',
+    commit = "1a31f824b9cd5bc6f342fc29e9a53b60d74af245",
+  },
   {
     'neovim/nvim-lspconfig',
     event = "BufReadPre",
