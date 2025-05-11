@@ -301,7 +301,9 @@ return {
 	-- Snippets
 	{
 		"L3MON4D3/LuaSnip",
+                version = 'v2.*',
 		event = "LspAttach",
+                 build = 'make install_jsregexp',
 	},
 	{ "rafamadriz/friendly-snippets" },
 }
