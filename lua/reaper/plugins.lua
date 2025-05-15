@@ -559,13 +559,6 @@ return {
 			{ "<leader>u", "<cmd>UndotreeToggle<CR>", { mode = "n" }, desc = "UndoTree" },
 		},
 	},
-	-- {
-	--   'jose-elias-alvarez/null-ls.nvim',
-	--   event = "BufReadPre",
-	--   config = function()
-	--     require("plugins.core.null-ls")
-	--   end,
-	-- },
 	{
 		"stevearc/conform.nvim",
 		event = { "BufReadPre", "BufNewFile" },
@@ -607,12 +600,6 @@ return {
 			require("nvim-surround").setup()
 		end,
 	},
-	-- {
-	-- 	"goolord/alpha-nvim",
-	-- 	config = function()
-	-- 		require("plugins.alpha")
-	-- 	end,
-	-- },
 	{ "sindrets/diffview.nvim" },
 	--LSP
 	{
@@ -709,26 +696,4 @@ return {
 		},
 		opts_extend = { "sources.default", "sources.compat" },
 	},
-	-- {
-	--   'hrsh7th/nvim-cmp',
-	--   -- event = "InsertEnter",
-	--   event = "BufReadPre",
-	--   dependencies = {
-	--     'hrsh7th/cmp-buffer',
-	--     'hrsh7th/cmp-path',
-	--     'saadparwaiz1/cmp_luasnip',
-	--     'hrsh7th/cmp-nvim-lsp',
-	--     'hrsh7th/cmp-nvim-lua',
-	--   },
-	--   config = function()
-	--     require("plugins.core.cmp")
-	--   end,
-	-- },
-	-- Snippets
-	-- {
-	-- 	"L3MON4D3/LuaSnip",
-	-- 	version = "v2.*",
-	-- 	event = "LspAttach",
-	-- 	build = "make install_jsregexp",
-	-- },
 }
