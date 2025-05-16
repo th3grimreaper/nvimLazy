@@ -542,6 +542,7 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
+		lazy = true,
 		config = function()
 			require("plugins.treesitter")
 		end,
@@ -663,6 +664,13 @@ return {
 				accept = {
 					auto_brackets = { enabled = true },
 				},
+				ghost_text = {
+					enabled = false,
+					show_with_menu = false,
+				},
+				menu = {
+					auto_show = true,
+				},
 				documentation = {
 					auto_show = true,
 					auto_show_delay_ms = 100,
@@ -682,16 +690,6 @@ return {
 				nerd_font_variant = "mono",
 			},
 			signature = { enabled = true },
-			completion = {
-				ghost_text = {
-					enabled = false,
-					show_with_menu = false,
-				},
-				menu = {
-					auto_show = true,
-				},
-				documentation = { auto_show = true },
-			},
 			fuzzy = { implementation = "prefer_rust_with_warning" },
 		},
 		opts_extend = { "sources.default", "sources.compat" },
