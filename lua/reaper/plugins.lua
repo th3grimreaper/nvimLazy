@@ -541,6 +541,7 @@ return {
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
+		commit = "066fd6505377e3fd4aa219e61ce94c2b8bdb0b79",
 		build = ":TSUpdate",
 		lazy = true,
 		config = function()
