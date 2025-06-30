@@ -69,6 +69,7 @@ local servers = {
 	"bashls",
 	"pyright",
 	"ruff",
+	"svelte",
 }
 
 for _, sv in ipairs(servers) do
