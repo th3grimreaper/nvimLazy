@@ -16,6 +16,13 @@ return {
 			-- your configuration comes here
 			-- or leave it empty to use the default settings
 			-- refer to the configuration section below
+			picker = {
+				enabled = true,
+				exclude = {
+					".git/*",
+					"node_modules/*",
+				},
+			},
 			dashboard = {
 				enabled = true,
 				preset = {
@@ -541,6 +548,7 @@ return {
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
+		commit = "066fd6505377e3fd4aa219e61ce94c2b8bdb0b79",
 		build = ":TSUpdate",
 		lazy = true,
 		config = function()
