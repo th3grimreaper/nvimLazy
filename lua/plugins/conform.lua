@@ -11,6 +11,7 @@ require("conform").setup({
 		typescript = { "prettierd" },
 		javascriptreact = { "prettierd" },
 		typescriptreact = { "prettierd" },
+		svelte = { "prettierd" },
 		css = { "prettierd" },
 		scss = { "prettierd" },
 		html = { "prettierd" },
@@ -20,8 +21,6 @@ require("conform").setup({
 		markdown = { "prettierd" },
 		lua = { "stylua" },
 		bash = { "shfmt" },
-		golang = { "goimports" },
-		-- golang = { "gofumpt" },
 	},
 	format_on_save = {
 		timeout_ms = 500,

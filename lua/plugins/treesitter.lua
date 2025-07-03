@@ -48,18 +48,14 @@ require("nvim-treesitter.configs").setup({
 		"dockerfile",
 	},
 	sync_install = false,
+
+	auto_install = true,
+
+	-- List of parsers to ignore installing (or "all")
+	ignore_install = { "" },
+	defaults = { file_ignore_patterns = { "node_modules" } },
 	highlight = {
 		enable = true,
 		additional_vim_regex_highlighting = false,
 	},
-	-- rainbow = {
-	--   enable = false,
-	--   query = 'rainbow-parens',
-	--   -- Highlight the entire buffer all at once
-	--   strategy = require('ts-rainbow').strategy.global,
-	--   -- extended_mode = true,
-	--   -- max_file_lines = nil,
-	--   disable = {},
-	-- },
-	defaults = { file_ignore_patterns = { "node_modules" } },
 })

@@ -459,21 +459,21 @@ return {
 			end
 		end,
 	},
-	{
-		"ray-x/go.nvim",
-		dependencies = { -- optional packages
-			"ray-x/guihua.lua",
-			"neovim/nvim-lspconfig",
-			"nvim-treesitter/nvim-treesitter",
-		},
-		lazy = true,
-		config = function()
-			require("go").setup()
-		end,
-		event = { "CmdlineEnter" },
-		ft = { "go", "gomod" },
-		build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
-	},
+	-- {
+	-- 	"ray-x/go.nvim",
+	-- 	dependencies = { -- optional packages
+	-- 		"ray-x/guihua.lua",
+	-- 		"neovim/nvim-lspconfig",
+	-- 		"nvim-treesitter/nvim-treesitter",
+	-- 	},
+	-- 	lazy = true,
+	-- 	config = function()
+	-- 		require("go").setup()
+	-- 	end,
+	-- 	event = { "CmdlineEnter" },
+	-- 	ft = { "go", "gomod" },
+	-- 	build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
+	-- },
 	{
 		"stevearc/oil.nvim",
 		keys = {
@@ -548,9 +548,14 @@ return {
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
-		commit = "066fd6505377e3fd4aa219e61ce94c2b8bdb0b79",
+		branch = "master",
+		lazy = false,
 		build = ":TSUpdate",
-		lazy = true,
+
+		-- "nvim-treesitter/nvim-treesitter",
+		-- commit = "066fd6505377e3fd4aa219e61ce94c2b8bdb0b79",
+		-- build = ":TSUpdate",
+		-- lazy = true,
 		config = function()
 			require("plugins.treesitter")
 		end,
