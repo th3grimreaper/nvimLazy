@@ -19,6 +19,7 @@ require("nvim-treesitter.configs").setup({
 		"scss",
 		"json",
 		"regex",
+		"rust",
 		"vim",
 		"vimdoc",
 		"go",
