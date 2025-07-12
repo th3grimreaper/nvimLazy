@@ -657,6 +657,7 @@ return {
 			version = "v2.*",
 		},
 		event = "InsertEnter",
+		commit = "022521a8910a5543b0251b21c9e1a1e989745796",
 		version = "1.*",
 		commit = "022521a8910a5543b0251b21c9e1a1e989745796",
 
