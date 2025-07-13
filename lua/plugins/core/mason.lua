@@ -19,6 +19,7 @@ require("mason-lspconfig").setup({
 		"htmx",
 		"marksman",
 		"lua_ls",
+		"gopls",
 	},
 	automatic_installation = true,
 })

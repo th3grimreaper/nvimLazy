@@ -89,7 +89,7 @@ lspconfig.eslint.setup(require("plugins.core.servers.eslint"))
 lspconfig.rust_analyzer.setup(require("plugins.core.servers.rust"))
 
 --gopls
--- lspconfig.gopls.setup(require("plugins.core.servers.gopls"))
+lspconfig.gopls.setup(require("plugins.core.servers.gopls"))
 
 --clangd
 lspconfig.clangd.setup(require("plugins.core.servers.clangd"))

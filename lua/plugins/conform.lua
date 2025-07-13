@@ -21,6 +21,7 @@ require("conform").setup({
 		markdown = { "prettierd" },
 		lua = { "stylua" },
 		bash = { "shfmt" },
+		golang = { "goimports" },
 	},
 	format_on_save = {
 		timeout_ms = 500,
