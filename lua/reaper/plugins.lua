@@ -109,13 +109,6 @@ return {
 				end,
 				desc = "Notification History",
 			},
-			{
-				"<leader>e",
-				function()
-					Snacks.explorer()
-				end,
-				desc = "File Explorer",
-			},
 			-- find
 			{
 				"<leader>fb",
@@ -488,16 +481,6 @@ return {
 		config = function()
 			require("better_escape").setup()
 		end,
-	},
-	{
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v3.x",
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-		},
-		keys = {
-			{ "<leader>b", "<cmd>Neotree toggle<CR>", mode = { "n" }, desc = "Neotree" },
-		},
 	},
 	{ "nvim-tree/nvim-web-devicons" },
 	{
