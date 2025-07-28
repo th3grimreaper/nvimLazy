@@ -22,7 +22,14 @@ require("conform").setup({
 		lua = { "stylua" },
 		bash = { "shfmt" },
 		python = { "black" },
-		golang = { "goimports" },
+		go = { "gofumpt", "goimports-reviser" },
+	},
+	formatters = {
+		gofumpt = {
+			command = "gofumpt",
+			args = { "$FILENAME" },
+			stdin = false,
+		},
 	},
 	format_on_save = {
 		timeout_ms = 500,
