@@ -668,10 +668,23 @@ return {
 				},
 				menu = {
 					auto_show = true,
+					border = "rounded",
+					draw = {
+						columns = {
+							{ "label", gap = 10 },
+							{ "kind_icon", gap = 1 },
+							{ "kind" },
+							{ "label_description" },
+						},
+
+						gap = 1,
+						treesitter = { "lsp" },
+					},
 				},
 				documentation = {
 					auto_show = true,
 					auto_show_delay_ms = 100,
+					window = { border = "rounded" },
 				},
 			},
 			keymap = {
