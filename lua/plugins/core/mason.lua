@@ -12,7 +12,7 @@ require("mason-lspconfig").setup({
 		"clangd",
 		"jdtls",
 		"ruff",
-		"pyright",
+		"basedpyright",
 		"bashls",
 		"eslint",
 		"bashls",

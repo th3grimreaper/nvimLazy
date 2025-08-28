@@ -66,7 +66,7 @@ local servers = {
 	"emmet_ls",
 	"jsonls",
 	"bashls",
-	"pyright",
+	"basedpyright",
 	"ruff",
 	"svelte",
 }
