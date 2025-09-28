@@ -17,7 +17,7 @@ require("conform").setup({
 		html = { "prettierd" },
 		json = { "prettierd" },
 		cpp = { "clang_format" },
-		java = { "google_java_format" },
+		java = { "clang_format" },
 		c = { "clang_format" },
 		markdown = { "prettierd" },
 		lua = { "stylua" },

@@ -32,6 +32,9 @@ vim.api.nvim_set_keymap("i", "<C-H>", "<C-W>", { noremap = true })
 --remap netrw
 vim.api.nvim_set_keymap("n", "-", "<cmd>Explore<CR>", { noremap = true })
 
+--remap mini files open
+vim.api.nvim_set_keymap("n", "<leader>b", ":lua MiniFiles.open()<CR>", { noremap = true })
+
 --move lines up -> ddp
 --move lines down -> ddkP
 

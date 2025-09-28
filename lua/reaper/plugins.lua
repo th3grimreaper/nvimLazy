@@ -8,6 +8,13 @@ return {
 		end,
 	},
 	{
+		"nvim-mini/mini.files",
+		version = false,
+		config = function()
+			require("mini.files").setup()
+		end,
+	},
+	{
 		"folke/snacks.nvim",
 		priority = 1000,
 		lazy = false,
@@ -640,8 +647,8 @@ return {
 			version = "v2.*",
 		},
 		event = "InsertEnter",
-		commit = "022521a8910a5543b0251b21c9e1a1e989745796",
 		version = "1.*",
+		-- build = "cargo +nightly build --release",
 		commit = "022521a8910a5543b0251b21c9e1a1e989745796",
 
 		---@module 'blink.cmp'
@@ -668,7 +675,8 @@ return {
 				},
 				menu = {
 					auto_show = true,
-					border = "rounded",
+
+					-- border = "rounded",
 					draw = {
 						columns = {
 							{ "label", gap = 10 },
@@ -684,11 +692,13 @@ return {
 				documentation = {
 					auto_show = true,
 					auto_show_delay_ms = 100,
-					window = { border = "rounded" },
+					-- window = { border = "rounded" },
 				},
 			},
 			keymap = {
 				preset = "default",
+				["C-p"] = { "select_prev", "fallback" },
+				["C-n"] = { "select_next", "fallback" },
 				["<Tab>"] = { "select_and_accept", "fallback" },
 			},
 			-- completion.ghost_text.enabled = true,
