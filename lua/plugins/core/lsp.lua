@@ -61,7 +61,7 @@ local servers = {
 	"vtsls",
 	"jdtls",
 	"lua_ls",
-	"emmet_ls",
+	-- "emmet_ls",
 	"jsonls",
 	"bashls",
 	"basedpyright",

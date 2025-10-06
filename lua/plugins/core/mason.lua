@@ -1,7 +1,7 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = {
-		"emmet_ls",
+		-- "emmet_ls",
 		"html",
 		"cssls",
 		"vtsls",
