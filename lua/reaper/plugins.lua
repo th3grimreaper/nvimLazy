@@ -7,13 +7,13 @@ return {
 			require("plugins.colorscheme")
 		end,
 	},
-	{
-		"nvim-mini/mini.files",
-		version = false,
-		config = function()
-			require("mini.files").setup()
-		end,
-	},
+	-- {
+	-- 	"nvim-mini/mini.files",
+	-- 	version = false,
+	-- 	config = function()
+	-- 		require("mini.files").setup()
+	-- 	end,
+	-- },
 	{
 		"folke/snacks.nvim",
 		priority = 1000,
@@ -649,7 +649,7 @@ return {
 		event = "InsertEnter",
 		version = "1.*",
 		-- build = "cargo +nightly build --release",
-		commit = "022521a8910a5543b0251b21c9e1a1e989745796",
+		-- commit = "022521a8910a5543b0251b21c9e1a1e989745796",
 
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
@@ -713,7 +713,7 @@ return {
 			signature = { enabled = true },
 			fuzzy = { implementation = "prefer_rust_with_warning" },
 		},
-		opts_extend = { "sources.default", "sources.compat" },
+		opts_extend = { "sources.default" },
 	},
 	{
 		"ray-x/go.nvim",
