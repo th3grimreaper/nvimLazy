@@ -59,7 +59,7 @@ local servers = {
 	"htmx",
 	"html",
 	"cssls",
-	"vtsls",
+	"ts_ls",
 	"jdtls",
 	"lua_ls",
 	"emmet_ls",

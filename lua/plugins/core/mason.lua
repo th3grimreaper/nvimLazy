@@ -4,7 +4,7 @@ require("mason-lspconfig").setup({
 		"emmet_ls",
 		"html",
 		"cssls",
-		"vtsls",
+		"ts_ls",
 		"eslint",
 		"tailwindcss",
 		"jsonls",
