@@ -649,7 +649,7 @@ return {
 		event = "InsertEnter",
 		version = "1.*",
 		-- build = "cargo +nightly build --release",
-		-- commit = "022521a8910a5543b0251b21c9e1a1e989745796",
+		commit = "022521a8910a5543b0251b21c9e1a1e989745796",
 
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
