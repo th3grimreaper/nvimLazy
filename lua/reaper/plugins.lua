@@ -7,13 +7,6 @@ return {
 			require("plugins.colorscheme")
 		end,
 	},
-	-- {
-	-- 	"nvim-mini/mini.files",
-	-- 	version = false,
-	-- 	config = function()
-	-- 		require("mini.files").setup()
-	-- 	end,
-	-- },
 	{
 		"folke/snacks.nvim",
 		priority = 1000,
@@ -459,21 +452,6 @@ return {
 			end
 		end,
 	},
-	-- {
-	-- 	"ray-x/go.nvim",
-	-- 	dependencies = { -- optional packages
-	-- 		"ray-x/guihua.lua",
-	-- 		"neovim/nvim-lspconfig",
-	-- 		"nvim-treesitter/nvim-treesitter",
-	-- 	},
-	-- 	lazy = true,
-	-- 	config = function()
-	-- 		require("go").setup()
-	-- 	end,
-	-- 	event = { "CmdlineEnter" },
-	-- 	ft = { "go", "gomod" },
-	-- 	build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
-	-- },
 	{
 		"stevearc/oil.nvim",
 		keys = {
@@ -514,13 +492,6 @@ return {
 					enable = false,
 				},
 			})
-		end,
-	},
-	{
-		"stevearc/dressing.nvim",
-		event = "BufReadPre",
-		config = function()
-			require("dressing").setup()
 		end,
 	},
 	{
