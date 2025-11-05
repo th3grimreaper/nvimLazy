@@ -647,9 +647,9 @@ return {
 			version = "v2.*",
 		},
 		event = "InsertEnter",
-		version = "1.*",
+		version = "1.3.1",
 		-- build = "cargo +nightly build --release",
-		commit = "022521a8910a5543b0251b21c9e1a1e989745796",
+		-- commit = "022521a8910a5543b0251b21c9e1a1e989745796",
 
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
@@ -657,6 +657,13 @@ return {
 			snippets = { preset = "luasnip" },
 			-- ensure you have the `snippets` source (enabled by default)
 			sources = {
+				providers = {
+					lsp = {
+						name = "LSP",
+						module = "blink.cmp.sources.lsp",
+						fallbacks = { "buffer" },
+					},
+				},
 				default = { "lsp", "path", "snippets", "buffer" },
 			},
 
@@ -676,7 +683,7 @@ return {
 				menu = {
 					auto_show = true,
 
-					border = "rounded",
+					border = "solid",
 					draw = {
 						columns = {
 							{ "label", gap = 10 },
@@ -692,11 +699,11 @@ return {
 				documentation = {
 					auto_show = true,
 					auto_show_delay_ms = 500,
-					window = { border = "rounded" },
+					window = { border = "solid" },
 				},
 			},
 			keymap = {
-				preset = "default",
+				preset = "super-tab",
 				["C-p"] = { "select_prev", "fallback" },
 				["C-n"] = { "select_next", "fallback" },
 				["<Tab>"] = { "select_and_accept", "fallback" },
