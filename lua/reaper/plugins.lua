@@ -679,7 +679,18 @@ return {
 				preset = "super-tab",
 				["C-p"] = { "select_prev", "fallback" },
 				["C-n"] = { "select_next", "fallback" },
-				["<Tab>"] = { "select_and_accept", "fallback" },
+				-- ["<Tab>"] = { "select_and_accept", "fallback" },
+				["<Tab>"] = {
+					function(cmp)
+						if cmp.snippet_active() then
+							return cmp.accept()
+						else
+							return cmp.select_and_accept()
+						end
+					end,
+					"snippet_forward",
+					"fallback",
+				},
 			},
 			-- completion.ghost_text.enabled = true,
 			--
