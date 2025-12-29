@@ -74,6 +74,7 @@ local servers = {
 	"gopls",
 	"rust_analyzer",
 	"tailwindcss",
+	"elixirls",
 }
 
 vim.lsp.enable(servers)

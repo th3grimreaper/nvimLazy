@@ -5,6 +5,7 @@ require("mason-lspconfig").setup({
 		"html",
 		"cssls",
 		-- "ts_ls",
+		"elixirls",
 		"vtsls",
 		"eslint",
 		"tailwindcss",

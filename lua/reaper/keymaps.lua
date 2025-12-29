@@ -32,6 +32,12 @@ vim.api.nvim_set_keymap("i", "<C-H>", "<C-W>", { noremap = true })
 --remap netrw
 vim.api.nvim_set_keymap("n", "-", "<cmd>Explore<CR>", { noremap = true })
 
+--folds
+vim.o.foldmethod = "expr"
+vim.o.foldlevel = 99
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldtext = ""
+
 --remap mini files open
 -- vim.api.nvim_set_keymap("n", "<leader>b", ":lua MiniFiles.open()<CR>", { noremap = true })
 
