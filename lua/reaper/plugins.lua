@@ -7,6 +7,14 @@ return {
 			require("plugins.colorscheme")
 		end,
 	},
+	-- {
+	-- 	"navarasu/onedark.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000, -- Ensure it loads first
+	-- 	config = function()
+	-- 		require("plugins.colorscheme")
+	-- 	end,
+	-- },
 	{
 		"folke/snacks.nvim",
 		priority = 1000,
@@ -621,6 +629,7 @@ return {
 		},
 		event = "InsertEnter",
 		version = "1.3.1",
+		-- version = "1.*",
 		-- build = "cargo +nightly build --release",
 		-- commit = "022521a8910a5543b0251b21c9e1a1e989745796",
 
