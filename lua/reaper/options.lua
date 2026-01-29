@@ -16,3 +16,5 @@ set.splitbelow = true
 set.laststatus = 3
 
 setG.netrw_keepdir = 0
+-- commentstring
+setG.skip_ts_context_commentstring_module = true
